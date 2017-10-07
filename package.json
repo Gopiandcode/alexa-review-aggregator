@@ -1,0 +1,21 @@
+{
+  "name": "alexa-review-aggregator",
+  "version": "0.0.1",
+  "description": "A nodejs application to aggregate alexa skill reviews for research purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "alexa",
+    "skills",
+    "research",
+    "aggregator"
+  ],
+  "author": "Gopiandcode (Kiran Gopinathan)",
+  "license": "MIT"
+}
