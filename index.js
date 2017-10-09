@@ -14,8 +14,9 @@ function navigateToAlexaSkills(driver, callback) {
 		driver.findElement(webdriver.By.name('password')).sendKeys(signin_data.password).then(() => {
 			driver.findElement(webdriver.By.id('signInSubmit')).click().then(() => {
 				let apps = webdriver.By.id('iApps');
-				driver.wait(until.elementLocated(apps, 10000)).then(() => {
-					driver.wait(until.elementIsVisible(driver.findElement(apps), 10000)).then(() => {
+				driver.wait(until.elementLocated(apps)).then(() => {
+					driver.sleep(1000).then(() => {
+					driver.wait(until.elementIsEnabled(driver.findElement(apps))).then(() => {
 						driver.findElement(webdriver.By.id('iApps')).click().then(() => {
 							driver.wait(until.elementLocated(webdriver.By.id('a2s-search-input', 10000))).then(() => {
 							driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.id('a2s-search-input', 10000)))).then(() => {
@@ -24,6 +25,7 @@ function navigateToAlexaSkills(driver, callback) {
 						});
 						});
 					});
+				});
 				});
 			});
 		});
