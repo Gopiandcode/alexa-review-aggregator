@@ -70,7 +70,9 @@ function foreachSearchResult(driver, callback) {
 }
 
 function parseSearchResult(driver, elem) {
-	return driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
+	if(elem) 
+		{
+			return driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
 		elem.findElement(webdriver.By.className('skill-name')).click().then(() => {
 
 			return driver.wait(until.elementLocated(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div > section.skill-detail-header > section > div.skill-info > h2'))).then(() => {
@@ -86,24 +88,26 @@ function parseSearchResult(driver, elem) {
 										db.storephrase(skillname, phrase);
 									});
 								})).then(() => {
-									return driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')).click().then(() => {
-										return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elements) => {
-											return promise.all(elements.map((item) => {
-												return item.findElements(webdriver.By('div > div > div.a2s-star-rating-region > div > div > span > i')).then((scoreitems) => {
-													let score = scoreitems.length;
-													return item.findElement(webdriver.By('div > div > div.a2s-review-text-region > div > p')).then((reviewtext) => {
-														reviewtext.getText().then((reveiw_text) => {
-															db.storereview(skillname, score || 0, reviewtext);
+									return driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')).then((elem) => elem.click().then(() => {
+										return driver.findElements(webdriver.By.css('div.a2s-list-region > ul > li')).then((elements) => {
+											let reviews = elements.map((item) => {
+												return item.findElement(webdriver.By('div > div > div.a2s-star-rating-region > div > div')).then((scoreitem) => {
+													return scoreitem.getAttribute('label').then((score) =>   {
+														return item.findElement(webdriver.By('div > div > div.a2s-review-text-region > div > p')).then((reviewtext) => {
+															reviewtext.getText().then((reveiw_text) => {
+																db.storereview(skillname, score, reviewtext);
+															});
 														});
 													});
 												});
-											})).then(() => {
+											});
+											return promise.all(reviews).then(() => {
 												driver.navigate().back().then(() => {
 													driver.navigate().back();
 												});
 											});
 										});
-									});
+									}), (err) => {console.log("No Reviews exist " + err)});
 								});
 							});
 						})
@@ -114,6 +118,8 @@ function parseSearchResult(driver, elem) {
 	});
 		});
 	});
+} else
+return undefined;
 }
 
 navigateToAlexaSkills(driver, (driver) => {

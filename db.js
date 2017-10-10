@@ -5,7 +5,7 @@ function getdb(callback) {
 
         db.serialize(function() {
             db.run("CREATE TABLE if not exists skills (name TEXT PRIMARY KEY, description TEXT)");
-            db.run("CREATE TABLE if not exists reviews (id INTEGER PRIMARY KEY AUTOINCREMENT, score INTEGER, comment TEXT, name TEXT, FOREIGN KEY(name) REFERENCES skills(name))");
+            db.run("CREATE TABLE if not exists reviews (id INTEGER PRIMARY KEY AUTOINCREMENT, score TEXT, comment TEXT, name TEXT, FOREIGN KEY(name) REFERENCES skills(name))");
             db.run("CREATE TABLE IF NOT EXISTS phrases (id INTEGER PRIMARY KEY AUTOINCREMENT, phrase TEXT, name TEXT, FOREIGN KEY(name) REFERENCES skills(name))")
             
         });
