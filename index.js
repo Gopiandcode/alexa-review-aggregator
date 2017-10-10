@@ -58,8 +58,14 @@ function foreachListElement(driver, elems) {
 function foreachSearchResult(driver, callback) {
 	driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => {
 		//		let pendinghtml = elems.map((elem) => { return parseSearchResult(driver, elem); });
-		foreachListElement(driver, elems);
-
+		//foreachListElement(driver, elems);
+		let result = promise.fullyResolved();
+		for (let i = 0; i < elems.length; ++i) {
+			result = result.then(() => {driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => { parseSearchResult(driver, elems[i]); })});
+		}
+		result.then(() => {
+			console.log("Done");
+		});
 	});
 }
 
@@ -75,7 +81,7 @@ function parseSearchResult(driver, elem) {
 						return descitem.getText().then((description) => {
 							db.storeskill(skillname, description);
 							return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-sample-utterances > div > ul > li')).then((phraseitems) => {
-								return promse.all(phraseitems.map((phraseelem) => {
+								return promise.all(phraseitems.map((phraseelem) => {
 									return phraseelem.getText().then((phrase) => {
 										db.storephrase(skillname, phrase);
 									});
