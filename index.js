@@ -66,6 +66,9 @@ function foreachSearchResult(driver, callback) {
 function parseSearchResult(driver, elem) {
 	return driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
 		elem.findElement(webdriver.By.className('skill-name')).click().then(() => {
+
+			return driver.wait(until.elementLocated(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div > section.skill-detail-header > section > div.skill-info > h2'))).then(() => {
+			return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div > section.skill-detail-header > section > div.skill-info > h2')))).then(() => {
 			return driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div > section.skill-detail-header > section > div.skill-info > h2')).then((textitem) => {
 				return textitem.getText().then((skillname) => {
 					return driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-info-region > div > ul > div > div.text-component.mode-sub-section > p')).then((descitem) => {
@@ -101,6 +104,8 @@ function parseSearchResult(driver, elem) {
 					});
 				})
 			});
+		});
+	});
 		});
 	});
 }
