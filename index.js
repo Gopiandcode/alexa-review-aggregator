@@ -64,7 +64,7 @@ function search(driver, i, length) {
 	return driver.findElements(webdriver.By.css(search_str)).then((elems) => {
 						console.log("length: " + length + ", elem.length: " + elems.length);
 						if (length < elems.length) { console.log("length was " + length + ", is now " + elems.length); length = elems.length; }
-						if(elems.length == 0)
+						if(elems.length < i)
 							return search(driver, i, length);
 						if(i < length) {
 							let result = parseSearchResult(driver, elems[i])
