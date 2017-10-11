@@ -16,11 +16,14 @@ function navigateToAlexaSkills(driver, callback) {
 				let apps = webdriver.By.id('iApps');
 				driver.wait(until.elementLocated(apps)).then(() => {
 					driver.sleep(1000).then(() => {
-						driver.wait(until.elementIsEnabled(driver.findElement(apps))).then(() => {
-							driver.findElement(webdriver.By.id('iApps')).click().then(() => {
-								driver.wait(until.elementLocated(webdriver.By.id('a2s-search-input', 10000))).then(() => {
-									driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.id('a2s-search-input', 10000)))).then(() => {
-										callback(driver);
+
+						driver.wait(until.elementIsVisible(driver.findElement(apps))).then(() => {
+							driver.wait(until.elementIsEnabled(driver.findElement(apps))).then(() => {
+								driver.findElement(webdriver.By.id('iApps')).click().then(() => {
+									driver.wait(until.elementLocated(webdriver.By.id('a2s-search-input', 10000))).then(() => {
+										driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.id('a2s-search-input', 10000)))).then(() => {
+											callback(driver);
+										});
 									});
 								});
 							});
@@ -55,16 +58,53 @@ function foreachListElement(driver, elems) {
 		console.log("Done");
 	});
 }
+
+function search(driver, i, length) {
+	let search_str = '#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li';
+	return driver.findElements(webdriver.By.css(search_str)).then((elems) => {
+						console.log("length: " + length + ", elem.length: " + elems.length);
+						if (length < elems.length) { console.log("length was " + length + ", is now " + elems.length); length = elems.length; }
+						if(elems.length == 0)
+							return search(driver, i, length);
+						if(i < length) {
+							let result = parseSearchResult(driver, elems[i])
+							if(result)	
+								return result.then(() => {
+							i = i + 1;
+							if(i < length) {
+								return search(driver, i, length);
+							}
+							return i;
+							});
+							else
+								return search(driver, i, length);
+						}
+						else 
+							return i;
+	});
+
+}
 function foreachSearchResult(driver, callback) {
 	driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
 		driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => {
 			//		let pendinghtml = elems.map((elem) => { return parseSearchResult(driver, elem); });
 			//foreachListElement(driver, elems);
-			let result = promise.fullyResolved();
-			for (let i = 0; i < elems.length; ++i) {
-				result = result.then(() => { driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => { parseSearchResult(driver, elems[i]); }) });
-			}
-			result.then(() => {
+			let length = elems.length;
+			let i = 0;
+/*			let result = promise.fullyResolved(i);
+			let search_str = '#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li';
+			for (; i < length; ++i) {
+				console.log(i);
+				result = result.then((i) => {
+					driver.findElements(webdriver.By.css(search_str)).then((elems) => {
+						console.log("length: " + length + ", elem.length: " + elems.length);
+						if (length < elems.length) { console.log("length was " + length + ", is now " + elems.length); length = elems.length; }
+						if(i < length)
+							return parseSearchResult(driver, elems[i]).then(() => {return i + 1});
+					})
+				});
+			}*/
+			search(driver, i, length).then(() => {
 				console.log("Done");
 			});
 		});
@@ -80,47 +120,53 @@ function parseSearchResult(driver, elem) {
 					return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div > section.skill-detail-header > section > div.skill-info > h2')))).then(() => {
 						return driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div > section.skill-detail-header > section > div.skill-info > h2')).then((textitem) => {
 							return textitem.getText().then((skillname) => {
-								return driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-info-region > div > ul > div > div.text-component.mode-sub-section > p')).then((descitem) => {
-									return descitem.getText().then((description) => {
-										db.storeskill(skillname, description);
-										return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-sample-utterances > div > ul > li')).then((phraseitems) => {
-											return promise.all(phraseitems.map((phraseelem) => {
-												return phraseelem.getText().then((phrase) => {
-													db.storephrase(skillname, phrase);
-												});
-											})).then(() => {
-												return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')).then((elems) => {
-													if (elems.length != 0) {
-														return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')))).then(() => {
-															return elems[0].click().then(() => {
-																return driver.findElements(webdriver.By.css('div.a2s-list-region > ul > li')).then((elements) => {
-																	let reviews = elements.map((item) => {
-																		return item.findElement(webdriver.By('div > div > div.a2s-star-rating-region > div > div')).then((scoreitem) => {
-																			return scoreitem.getAttribute('label').then((score) => {
-																				return item.findElement(webdriver.By('div > div > div.a2s-review-text-region > div > p')).then((reviewtext) => {
-																					reviewtext.getText().then((reveiw_text) => {
-																						db.storereview(skillname, score, reviewtext);
+								db.haveseenskill(skillname, (seen) => {
+									if (!seen) {
+										return driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-info-region > div > ul > div > div.text-component.mode-sub-section > p')).then((descitem) => {
+											return descitem.getText().then((description) => {
+												db.storeskill(skillname, description);
+												return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-sample-utterances > div > ul > li')).then((phraseitems) => {
+													return promise.all(phraseitems.map((phraseelem) => {
+														return phraseelem.getText().then((phrase) => {
+															db.storephrase(skillname, phrase);
+														});
+													})).then(() => {
+														return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')).then((elems) => {
+															if (elems.length != 0) {
+																return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')))).then(() => {
+																	return elems[0].click().then(() => {
+																		return driver.findElements(webdriver.By.css('div.a2s-list-region > ul > li')).then((elements) => {
+																			let reviews = elements.map((item) => {
+																				return item.findElement(webdriver.By('div > div > div.a2s-star-rating-region > div > div')).then((scoreitem) => {
+																					return scoreitem.getAttribute('label').then((score) => {
+																						return item.findElement(webdriver.By('div > div > div.a2s-review-text-region > div > p')).then((reviewtext) => {
+																							reviewtext.getText().then((reveiw_text) => {
+																								db.storereview(skillname, score, reviewtext);
+																							});
+																						});
 																					});
+																				});
+																			});
+																			return promise.all(reviews).then(() => {
+																				driver.navigate().back().then(() => {
+																					driver.navigate().back();
 																				});
 																			});
 																		});
 																	});
-																	return promise.all(reviews).then(() => {
-																		driver.navigate().back().then(() => {
-																			driver.navigate().back();
-																		});
-																	});
 																});
-															});
-														});
-													}
-													else return driver.navigate().back()
-												}, (err) => { console.log("No Reviews exist " + err) });
-											});
+															}
+															else return driver.navigate().back()
+														}, (err) => { console.log("No Reviews exist " + err) });
+													});
+												});
+											})
 										});
-									})
+									}
+
+									else return driver.navigate().back()
 								});
-							})
+							});
 						});
 					});
 				});

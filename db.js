@@ -48,5 +48,16 @@ module.exports = {
             });
         });
        
+    },
+    haveseenskill: function(skillname, callback) {
+        getdb((db) => {
+            db.get("SELECT * FROM skills WHERE name=?", skillname, (_db, row) => {
+                if(row)
+                    callback(true);
+                else
+                    callback(false);
+            });
+
+        });
     }
 }
