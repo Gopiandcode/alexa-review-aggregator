@@ -56,15 +56,17 @@ function foreachListElement(driver, elems) {
 	});
 }
 function foreachSearchResult(driver, callback) {
-	driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => {
+    driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
+		driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => {
 		//		let pendinghtml = elems.map((elem) => { return parseSearchResult(driver, elem); });
 		//foreachListElement(driver, elems);
-		let result = promise.fullyResolved();
-		for (let i = 0; i < elems.length; ++i) {
-			result = result.then(() => {driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => { parseSearchResult(driver, elems[i]); })});
-		}
-		result.then(() => {
-			console.log("Done");
+			let result = promise.fullyResolved();
+			for (let i = 0; i < elems.length; ++i) {
+				result = result.then(() => {driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li')).then((elems) => { parseSearchResult(driver, elems[i]); })});
+			}
+			result.then(() => {
+				console.log("Done");
+			});
 		});
 	});
 }
