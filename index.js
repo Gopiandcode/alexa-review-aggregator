@@ -111,6 +111,47 @@ function foreachSearchResult(driver, callback) {
 	});
 }
 
+function aggregateReviews(driver) {
+	return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')).then((elems) => {
+															if (elems.length != 0) {
+																return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.css('div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')))).then(() => {
+																	return elems[0].click().then(() => {
+																		return driver.findElements(webdriver.By.css('div.a2s-list-region > ul > li > section')).then((elements) => {
+																			let reviews = elements.map((item) => {
+																			    item.getAttribute('innerHTML').then((text) => console.log(text));
+																				return item.findElement(webdriver.By.css('div.a2s-star-rating-region > div')).then((scoreitem) => {
+																					//scoreitem.getAttribute('innerHTML').then((text) => console.log(text));
+																					return scoreitem.getAttribute('aria-label').then((score) => {
+																						return item.findElement(webdriver.By.css('div.a2s-review-text-region > div > p')).then((reviewtext) => {
+																							reviewtext.getText().then((reveiw_text) => {
+																								console.log("Storing review " + skillname + ", " + score + ", " + reveiw_text);
+																								db.storereview(skillname, score, reviewtext);
+																							});
+																						});
+																					});
+																				});
+																			});
+																			return promise.all(reviews).then(() => {
+																				driver.navigate().back().then(() => {
+																					driver.navigate().back();
+																				});
+																			});
+																		});
+																	});
+																});
+															}
+															else {
+																return driver.findElements(webdriver.By.css('#a2s-no-reviews-yet')).then((anyreviews) => {
+																	if(anyreviews.length != 0) {
+																		anyreviews[0].getAttribute('innerHTML').then((text) => console.log(text));
+																		console.log("No Reviews found");
+																		return driver.navigate().back()
+																	} else return aggregateReviews(driver);
+																})
+															}
+														}, (err) => { console.log("No Reviews exist " + err) });
+}
+
 function parseSearchResult(driver, elem) {
 	if (elem) {
 		return driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
@@ -131,33 +172,7 @@ function parseSearchResult(driver, elem) {
 															db.storephrase(skillname, phrase);
 														});
 													})).then(() => {
-														return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')).then((elems) => {
-															if (elems.length != 0) {
-																return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')))).then(() => {
-																	return elems[0].click().then(() => {
-																		return driver.findElements(webdriver.By.css('div.a2s-list-region > ul > li')).then((elements) => {
-																			let reviews = elements.map((item) => {
-																				return item.findElement(webdriver.By('div > div > div.a2s-star-rating-region > div > div')).then((scoreitem) => {
-																					return scoreitem.getAttribute('label').then((score) => {
-																						return item.findElement(webdriver.By('div > div > div.a2s-review-text-region > div > p')).then((reviewtext) => {
-																							reviewtext.getText().then((reveiw_text) => {
-																								db.storereview(skillname, score, reviewtext);
-																							});
-																						});
-																					});
-																				});
-																			});
-																			return promise.all(reviews).then(() => {
-																				driver.navigate().back().then(() => {
-																					driver.navigate().back();
-																				});
-																			});
-																		});
-																	});
-																});
-															}
-															else return driver.navigate().back()
-														}, (err) => { console.log("No Reviews exist " + err) });
+														return aggregateReviews(driver);
 													});
 												});
 											})
@@ -177,7 +192,7 @@ function parseSearchResult(driver, elem) {
 }
 
 navigateToAlexaSkills(driver, (driver) => {
-	performSearch(driver, "joke", (driver) => {
+	performSearch(driver, "smoking", (driver) => {
 		foreachSearchResult(driver);
 	});
 });
