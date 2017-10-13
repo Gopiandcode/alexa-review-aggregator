@@ -34,7 +34,18 @@ function navigateToAlexaSkills(driver, callback) {
 		});
 	});
 }
-
+function goToLifestyleCategory(driver, callback) {
+	return driver.wait(until.elementLocated(webdriver.By.xpath('//h4[contains(text(), "Health & Fitness") and @class="text-heading"]'))).then(() => {
+		return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.xpath('//h4[contains(text(), "Health & Fitness") and @class="text-heading"]')))).then(() => {
+			return driver.findElement(webdriver.By.xpath('//h4[contains(text(), "Health & Fitness") and @class="text-heading"]')).then((item) => {
+				item.getAttribute('innerHTML').then((text) => console.log(text));
+				item.click().then(() => {
+				return callback(driver);
+			});
+		});
+		});
+	});
+}
 
 function performSearch(driver, text, callback) {
 	driver.findElement(webdriver.By.id('a2s-search-input')).sendKeys(text).then(() => {
@@ -65,10 +76,11 @@ function search(driver, i, length) {
 						console.log("length: " + length + ", elem.length: " + elems.length);
 						if (length < elems.length) { console.log("length was " + length + ", is now " + elems.length); length = elems.length; }
 						if(elems.length < i)
-							return search(driver, i, length);
+							return driver.sleep(1000).then(() => {return search(driver, i, length);});
 						if(i < length) {
+							driver.executeScript("if(arguments[0]) arguments[0].scrollIntoView()", elems[i+1]).then(() => {
 							let result = parseSearchResult(driver, elems[i])
-							if(result)	
+							if(result) {	
 								return result.then(() => {
 							i = i + 1;
 							if(i < length) {
@@ -76,8 +88,10 @@ function search(driver, i, length) {
 							}
 							return i;
 							});
+							}
 							else
 								return search(driver, i, length);
+						});
 						}
 						else 
 							return i;
@@ -114,6 +128,7 @@ function foreachSearchResult(driver, callback) {
 function aggregateReviews(driver) {
 	return driver.findElements(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')).then((elems) => {
 															if (elems.length != 0) {
+																console.log("elems.length not 0");
 																return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.css('div.a2s-content-region > div > div > div > section.skill-reviews-region > div > ul > div > div.text-component.mode-sub-section.type-navigation.type-secondary > h4')))).then(() => {
 																	return elems[0].click().then(() => {
 																		return driver.findElements(webdriver.By.css('div.a2s-list-region > ul > li > section')).then((elements) => {
@@ -141,9 +156,11 @@ function aggregateReviews(driver) {
 																});
 															}
 															else {
+																console.log("Elems.length 0")
 																return driver.findElements(webdriver.By.css('#a2s-no-reviews-yet')).then((anyreviews) => {
 																	if(anyreviews.length != 0) {
-																		anyreviews[0].getAttribute('innerHTML').then((text) => console.log(text));
+																		console.log("Not Recursing");
+																		//anyreviews[0].getAttribute('innerHTML').then((text) => console.log(text));
 																		console.log("No Reviews found");
 																		return driver.navigate().back()
 																	} else return aggregateReviews(driver);
@@ -154,7 +171,7 @@ function aggregateReviews(driver) {
 
 function parseSearchResult(driver, elem) {
 	if (elem) {
-		return driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
+		return  /*driver.wait(100).then(() => {*/ driver.wait(until.elementIsNotVisible(driver.findElement(webdriver.By.className('a2s-loading-view')))).then(() => {
 			elem.findElement(webdriver.By.className('skill-name')).click().then(() => {
 
 				return driver.wait(until.elementLocated(webdriver.By.css('#d-content > div > div > div.a2s-content-region > div > div > div > div > section.skill-detail-header > section > div.skill-info > h2'))).then(() => {
@@ -172,13 +189,14 @@ function parseSearchResult(driver, elem) {
 															db.storephrase(skillname, phrase);
 														});
 													})).then(() => {
-														return aggregateReviews(driver);
-													});
+														return driver.navigate().back()
+													});//.then(() => {
+														//return aggregateReviews(driver);
+													//});
 												});
 											})
 										});
 									}
-
 									else return driver.navigate().back()
 								});
 							});
@@ -192,7 +210,8 @@ function parseSearchResult(driver, elem) {
 }
 
 navigateToAlexaSkills(driver, (driver) => {
-	performSearch(driver, "smoking", (driver) => {
+	//performSearch(driver, "smoking", (driver) => {
+	goToLifestyleCategory(driver, (driver) => {
 		foreachSearchResult(driver);
 	});
 });
