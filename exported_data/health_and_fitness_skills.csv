@@ -1,0 +1,627 @@
+name,description
+Focus Word,"Focus Word provides an inspirational word or phrase along with a brief statement to serve as a point of focus you can use during meditation, or as a touchstone throughout the day. The word and statement are also sent to the Alexa app, in case you'd like to view them again."
+Daily Meditation Reminder,Daily Meditation Reminder's human host reminds you to meditate each day. Set goals and improve your health with meditation!
+Baby2Body,"Baby2Body is your personalised healthy living guide for pregnancy and early motherhood. Now, with Alexa, you can get your daily or weekly tips on the go – which include updates on your baby’s growth and information on your wellbeing, fitness, nutrition or beauty. All you have to do is ask Alexa to “Read my tips”. Alexa also helps you stay in tune with your baby’s development by asking “How many days to go?” or “How old is my baby?“. We believe happy, healthy moms make for happy, healthy babies – and Alexa makes it even easier to live your happiest, healthiest lifestyle as a new or soon-to-be mom.
+
+How to set up:
+
+1. Sign up to the Baby2Body platform either through the website (baby2body.com) or the iOS app (baby2body.com/app)
+2. On the Alexa app enable the Baby2Body skill. You will be asked to enter your Baby2Body login details to authorise
+3. Ask away!
+
+Alexa understands:
+
+Alexa, ask Baby2Body how long until my due date
+Alexa, ask Baby2Body how many days to go
+Alexa, ask Baby2Body how old is my baby
+Alexa, ask Baby2Body get my days to go
+Alexa, ask Baby2Body when do I give birth
+Alexa, ask Baby2Body how old is my baby girl
+Alexa, ask Baby2Body how old is my baby boy
+Alexa, ask Baby2Body read my daily tips
+Alexa, ask Baby2Body read me my tips
+Alexa, ask Baby2Body to read my pregnancy tips
+Alexa, ask Baby2Body to read my new mom tips"
+gratefull,"Gratefulness is the act of expressing gratitude and being thankful for what you have. As research suggests, practicing gratefulness daily leads to a positive outlook on life, improving your physical and emotional health. Not only that, spending some time reflecting on your day and reminding yourself of the positive events can help you sleep longer and better!
+
+Practicing gratefulness with a notebook and pen requires additional effort in our already busy lives. This skill makes it quick and easy to build a powerful habit. Simply say: ""Alexa, start grate full."" When asked, tell Alexa what you are grateful for and don't forget to rate your day on a scale between 0 and 10 (10 being the best). That's it - you are done! It takes less than 2 minutes.
+
+If you need help during the process, simply say, ""Alexa Help"". If something came up and you can't finish, just say ""Alexa Stop"" or ""Alexa Cancel"". All the best!"
+Air Pollution,"Provides the current hourly forecast (based of the current readings in an area) of air pollution for a given area.
+
+Makes use of information provided by http://www.londonair.org.uk published under the Open Government Licence - https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/
+
+Currently supports the current areas:
+AroundLondon
+CambridgeCity
+Cambridgeshire
+Essex
+Hampshire
+Leicester
+London
+Sussex
+Adur
+Almbridget
+Arun
+Barking and Dagenham
+Barnet
+Bexley
+Brent
+Brentwood
+Brighton and Hove
+Bromley
+Camden
+Castlepoint
+Chichester
+City of London
+Crawley
+Croydon
+Dacorum
+Ealing
+Eastbourne
+Enfield
+Engie
+Greenwich
+Hackney
+Hammersmith and Fulham
+Haringey
+Harrow
+Hastings
+Havering
+Hillingdon
+Horsham
+Hounslow
+Islington
+Kensington and Chelsea
+Kingston
+Lambeth
+Lewes
+Lewisham
+Merton
+Midsussex
+Molevalley
+Newham
+Redbridge
+Reigateandbanstead
+Richmond
+Rother
+Runnymeade
+Sevenoaks
+Singlela
+Southwark
+Sutton
+Thurrock
+Tower Hamlets
+Waltham Forest
+Wandsworth
+Wealden
+Westminster
+Windsor and Maidenhead
+Worthing"
+Thunderstorm Sounds,"Play relaxing thunderstorm sounds that help you fall asleep.
+
+Enjoy a good night sleep!"
+Rain Sounds,Listen to soothing sounds from the rain
+Forest Sounds,Listen to soothing sounds from a forest
+Night Night - Light & Sound,"Good sleep is good for your health and happiness. Night Night turns on Alexa's light, says a nice positive goodnight message then plays a short music box song (~1 min) to help you relax and prepare for sleep.
+
+To try this skill, click the 'Enable’ button in the Alexa App or say 'Alexa enable Night Night'. Then say 'Alexa open Night Night' to use. Say 'Alexa stop' to turn the music off.
+
+Everyone needs good sleep each night and we hope this skill helps you relax into a positive mindset before sleeping.
+
+Send us an email if you have any suggestions or feedback - support@voicecities.com. If you love this skill, please search for 'Night Night' in the Alexa app and leave us 5-stars. It would mean the world to us!"
+Just Do It Motivator,"★★★ MAY THE MOTIVATION BE WITH YOU ★★★
+
+The best Motivation speeches you've ever heard!
+
+Simply start the Motivator to get some motivation with:
+�� ""Alexa, start just do it motivator""
+
+Or, ask Motivator for help, and he will listen for you! It is as easy as:
+�� ""Alexa, ask just do it motivator for help""
+
+You can also tell Motivator, what you want to do and get the motivation to achieve your goal:
+�� ""Alexa, tell just do it motivator that I wanna go to the gym today""
+
+Get daily motivations people and increase the amount of endorphin in your blood :)
+
+--
+Motivator is inspired by the best Motivational Speech ""Just Do It"" by Shia LaBeouf
+
+--
+For Feedback feel free to drop us a message saandji.s@gmail.com or make a comment here!"
+Cair,"cair - The Smart Air Quality Sensor that tracks & manages your indoor air quality.
+
+cair is a smart air quality sensor that continuously monitors the air in your home.It learns your asthma and allergy triggers that are caused by poor indoor air quality.
+
+You can find more information about the cair sensor and how to purchase one at the website cairsensors.com.
+
+To enable and use this skill, you need to have at least one cair sensor and an account created in the cair app, available for android and iOS. Simply activate this skill and log into your cair account, and you can ask Alexa from anywhere for the status of your home air quality.
+
+You can ask for these measurements from your sensor:
+Particle (small and large) index
+Temperature
+Humidity
+Odour index
+
+You can also ask for your cair number, a personalised number that is updated based on logged triggers from the app. Simply ask ""Alexa, ask cair what is my cair number"" and Alexa will let you know your cair number and give an explanation of what the cair number is.
+
+You can also ask about your home air quality by asking ""Alexa, ask cair what is the air quality like in my home?"", and Alexa will give you a breakdown of the air quality in your home."
+Sleep Rhythms,"Calculate the best time to go to sleep to match a 90 minute sleep cycle with the time you wake up. You can change both the wake time and the number of full sleep cycles you wish to calculate for.
+
+You will still need to set an alarm to wake at this time.
+If you do not have a 90 minute sleep cycle this skill will not perform a calculation that is relevant for you."
+Walk Through the Woods,"Time for a relaxing walk through the woods - Start the skill, listen to the birds chirp and enjoy the rippling of the small streams. Close your eyes and taking in the forest atmosphere. When you can’t make it to the actual woods, this skill will bring a bit of “forest bathing” home.
+
+Try this:
+""Alexa, next” (skip forward)
+“Alexa, back” (skip backwards)
+“Alexa set sleeping timer one hour”"
+Health & Fitness Coach,"“Dehydrating a muscle by 3 percent, can cause a 10% loss of strength.”
+
+“For bigger arms, focus on developing your triceps. Your biceps only have two muscle bellies, while your triceps have three.”
+
+Want be healthy? Want to get fit? Not sure where to start? Already fit and healthy?
+
+Then this is the perfect skill for you. Full of helpful facts and tips on getting active, healthy eating, getting fit and building muscle, to get you well on your way to improving your mental, and physical self.
+
+This tool does not provide medical advice, and is for informational and educational purposes only, and is not a substitute for professional medical advice, treatment or diagnosis. Call your doctor to receive medical advice. If you think you may have a medical emergency, please dial your local emergency response phone number."
+Gareth,"Gareth is a disinterested and slightly passive aggressive AI, you can ask him for fashion and cooking advice such as
+
+Alexa ask Gareth's brain what I should wear
+or
+Alexa ask Gareth's brain what food I should eat
+
+HINT: Gareth things everything should be brown!"
+Biorhythm,"Are you in a bad mood today and can't explain why?
+
+Your individual biorhythm is not dependent on the stars, but on rhythms that are influenced by certain factors. Simply name your date of birth and find out your high and low points today.
+
+Biorhythm is an unproven hypothesis, which states that the human's ability to perform is underpinned by certain rhythms.
+This skill does not replace a visit to the doctor. It is for information purposes only.
+
+Enjoy the biorhythm skill!"
+PowerUp,"PowerUp dishes out strong pep talks to boost your morale and help improve your resilience in the face of adversity.
+
+Feeling too weak to try it out? Well, on your feet soldier!!
+You can do this!
+
+Enabling PowerUp is just the start. Once you get going, you'll keep going. You will become an unstoppable force. Onwards! Hup hup hup!"
+AirSupport,"Feeling low?
+Life have you down?
+Under pressure?
+Feeling strain and worry?
+
+Just call in AirSupport.
+
+AirSupport helps you gain a moment of clarity and perspective so you can feel a bit better and get through the day.
+
+AirSupport has you covered!
+
+Note: if you want to skip the current response, just say, ""Alexa, next."""
+numbers forward two,This skill is used to test memory based on recollecting the numbers back to alexa.
+numbers backward two,"This test is to used to test memory of letters based on dkefs test. This skill is a continuation of forward digit span, where digits are repeated back as heard. In this task, digits are repeated back when heard from alexa."
+MyPharmacist,provide common drug usage instruction
+numbers backward three,"This test is to used to test memory of letters based on dkefs test. This skill is a continuation of forward digit span, where digits are repeated back as heard. In this task, digits are repeated back when heard from alexa."
+Yoga Teacher,"Yoga Teacher Skill is your personal yoga teacher. This Alexa Skill guides you through based on your level it will help you to learn yoga. This skill contains beginner , intermediate and expert tutorial of yoga."
+Numbers backward one,"This test is to used to test memory of letters based on dkefs test. This skill is a continuation of forward digit span, where digits are repeated back as heard. In this task, digits are repeated back when heard from alexa."
+word memory,This test is used to recollect different pairs
+story memory three,This skill is used to read out stories and write all the parts they could remember about the story
+word memory three,This skill is used to read out few words and ask to recollect them in a 90 second interval time.
+letter category,This skill is used to test memory of different words that starts with a particular letter.
+word memory four,This skill is used to read out few words and ask to recollect them in a 90 second interval time.
+Letter number ordering,"This task is used to give a order of letters and numbers, and to repeat the back in an instructed manner,"
+Healthy Living Tips,"Healthy Living Tips provides curated tips to help you improve your life in the areas of: Fitness, Nutrition, Supplements, Mindfulness, Medications, and more!
+
+
+Disclaimer: This tool does not provide medical advice, and is for informational and educational purposes only, and is not a substitute for professional medical advice, treatment or diagnosis. Call your doctor to receive medical advice. If you think you may have a medical emergency, please dial 911."
+pbtrigger,Ask for advice on life
+Plume in Glasgow Flash Briefing,"Just like the weather, pollution levels can vary greatly over the course of a day. With the Plume in Glasgow flash briefing, you can now track live air quality metrics where you live and stay one step ahead of harmful pollutants.
+
+Plume provides the overall air quality level (moderate, high, very high, etc.), along with further detail about individual pollutant levels (particulate matter, ozone and nitrogen dioxide) and our Plume Index.
+
+You already plan your day to make the most of the sunshine – now you can make the most of clean air too!"
+Plume in Birmingham Flash Briefing,"Just like the weather, pollution levels can vary greatly over the course of a day. With the Plume in Birmingham flash briefing, you can now track live air quality metrics where you live and stay one step ahead of harmful pollutants.
+
+Plume provides the overall air quality level (moderate, high, very high, etc.), along with further detail about individual pollutant levels (particulate matter, ozone and nitrogen dioxide) and our Plume Index.
+
+You already plan your day to make the most of the sunshine – now you can make the most of clean air too!"
+Plume in Liverpool Flash Briefing,"Just like the weather, pollution levels can vary greatly over the course of a day. With the Plume in Liverpool flash briefing, you can now track live air quality metrics where you live and stay one step ahead of harmful pollutants.
+
+Plume provides the overall air quality level (moderate, high, very high, etc.), along with further detail about individual pollutant levels (particulate matter, ozone and nitrogen dioxide) and our Plume Index.
+
+You already plan your day to make the most of the sunshine – now you can make the most of clean air too!"
+Plume in Leeds Flash Briefing,"Just like the weather, pollution levels can vary greatly over the course of a day. With the Plume in Leeds flash briefing, you can now track live air quality metrics where you live and stay one step ahead of harmful pollutants.
+
+Plume provides the overall air quality level (moderate, high, very high, etc.), along with further detail about individual pollutant levels (particulate matter, ozone and nitrogen dioxide) and our Plume Index.
+
+You already plan your day to make the most of the sunshine – now you can make the most of clean air too!"
+Plume in London Flash Briefing,"Just like the weather, pollution levels can vary greatly over the course of a day. With the Plume in London flash briefing, you can now track live air quality metrics where you live and stay one step ahead of harmful pollutants.
+
+Plume provides the overall air quality level (moderate, high, very high, etc.), along with further detail about individual pollutant levels (particulate matter, ozone and nitrogen dioxide) and our Plume Index.
+
+You already plan your day to make the most of the sunshine – now you can make the most of clean air too!"
+First aid by British Red Cross,"The British Red Cross aims to give you the skills and knowledge to feel confident helping someone in a first aid situation. First aid by the British Red Cross can currently give you educational advice for the following situations:
+
+- Helping someone having who is having a seizure.
+- Helping someone who has a burn.
+- Helping someone who has a broken bone.
+- Helping someone who is having an asthma attack.
+- Helping someone who is bleeding heavily.
+- Helping someone who has a nosebleed.
+- Helping someone who is having a heart attack (new)
+- Helping someone who is choking (new)
+- Helping someone who is having a diabetic emergency (new)
+
+More first aid scenarios to follow. In the meantime you can find more skills on our Everyday First Aid website: http://www.redcross.org.uk/What-we-do/First-aid/Everyday-First-Aid, or you can download our First aid mobile app.
+
+You can enable First aid by simply saying: “Alexa, enable First aid by British Red Cross.” To start using the First aid by the British Red Cross Skill you can say: “Alexa, open First aid”.
+
+Once enabled, you can ask First aid by the British Red Cross a question at any time by saying: “Alexa, ask First aid how to help someone having a seizure”, or “Alexa, ask First aid how to help someone with a nosebleed”.
+
+Comments and suggestions are welcome. Please send your feedback to: alexa@redcross.org.uk
+
+The British Red Cross has endeavoured to ensure that this tool reflects the relevant guidance from informed authoritative sources, current at the time of launch. While the material contained here provides guidance on initial care and treatment, it is not intended to be, nor must be regarded as a substitute for medical advice treatment or diagnosis. Call your doctor to receive medical advice. If you think you may have a medical emergency, please dial 999.
+
+The First Aid by British Red Cross Skill is for educational purposes only.  It is not a substitute for medical advice, treatment, or diagnosis. In the event of a medical emergency, please dial 999."
+Sleep Sounds: Rainforest Sounds,"Rainforest Sounds is an ambient relaxing sleep sounds loop to help you block out unwanted noises, encourage relaxation, reduce stress, or help you fall asleep!
+
+By default the sound will play for 1 hour. To loop the sound until you say ""Alexa, stop”, just say ""Alexa, loop on"" while the sound is playing. The Skill will remember your preferred looping setting for all future uses so you don’t have to say it again :)
+
+Please leave a 5-star review if you love this Skill, or send us an email with your suggestions at support@getinvoked.com. Your 5-star reviews encourage us to keep making more great sleep sounds/ambient noise Skills!
+
+Looking for more ambient sleep sounds? Just say ""Alexa, start...""
+- Thunderstorm Sounds
+- Rain Sounds
+- Ocean Sounds
+- Babbling Brook
+- Rainforest Sounds
+- Fireplace Sounds
+- Fan Sounds
+- City Sounds
+- Train Sounds
+- Frog Sounds
+- Cricket Sounds
+- Bird Sounds
+- Clock Sounds
+- Cat Sounds
+- and more!
+
+For a full list of our relaxing ambient sleep sounds, search for ""invoked apps"" in the Alexa smartphone app or go to https://alexasounds.com.
+
+This Skill is made by the original author of the widely popular “sound” Skills for sleep and relaxation: Invoked Apps. Skills by Invoked Apps are genuinely made by an Amazon-certified “Alexa Champion”, so you always know you’re getting a high-quality experience!"
+Sleep Sounds: Fan Sounds,"Fan Sounds is an ambient relaxing sleep sounds loop to help you block out unwanted noises, encourage relaxation, reduce stress, or help you fall asleep!
+
+By default the sound will play for 1 hour. To loop the sound until you say ""Alexa, stop”, just say ""Alexa, loop on"" while the sound is playing. The Skill will remember your preferred looping setting for all future uses so you don’t have to say it again :)
+
+Please leave a 5-star review if you love this Skill, or send us an email with your suggestions at support@getinvoked.com. Your 5-star reviews encourage us to keep making more great sleep sounds/ambient noise Skills!
+
+Looking for more ambient sleep sounds? Just say ""Alexa, start...""
+- Thunderstorm Sounds
+- Rain Sounds
+- Ocean Sounds
+- Babbling Brook
+- Rainforest Sounds
+- Fireplace Sounds
+- Fan Sounds
+- City Sounds
+- Train Sounds
+- Frog Sounds
+- Cricket Sounds
+- Bird Sounds
+- Clock Sounds
+- Cat Sounds
+- and more!
+
+For a full list of our relaxing ambient sleep sounds, search for ""invoked apps"" in the Alexa smartphone app or go to https://alexasounds.com.
+
+This Skill is made by Invoked Apps, the original author of the widely popular “sounds” Skills like “Thunderstorm Sounds” and “Rain Sounds”. Skills by Invoked Apps are built by an Amazon-certified “Alexa Champion”, so you always know you’re getting a high-quality experience!"
+Belly Breathing,This app will walk you through a simple belly breathing exercise. No special hardware or accounts are required.
+No Cigarettes,"If you feel like smoking but you want to quit today? Just tell Alexa ""I want to smoke"" and she will convince you not to smoke by giving you some ideas for relaxing. You can also just say ""Cigarettes"" shortly and she will talk you out of it."
+Great Event Dates,"Simply ask Great Run the date of an event, or how long until the event. For example ""How long until the Great North Run?"", or ""What date is the Great Manchester Run?"""
+3rings,"This skill requires a 3rings Beta account. Please contact support if you're not sure if this applies to you.
+
+Hi! This skill lets you interact with 3rings using your voice. It can be used both by Family & Friends and by your loved one(s) in their home.
+
+As a Family & Friend, you'll be able to ask Alexa if everything's okay at your households, and it'll let you know if there're any problems.
+
+When used in a loved one's home, they can ask Alexa to let 3rings know they need help — we'll then contact all their Family & Friends right away, giving them a simple way to reach out should they need to."
+Chill Out,"A chill session is a very effective strategy to reduce stress. Chill Out is intended to help someone refocus, reenergize, and reclaim their chill.
+
+Here are some example phrases:
+""Alexa, chill out.""
+""Alexa, ask chill out for a minute.""
+""Alexa, ask chill out for a session.""
+
+Disclaimer: This skill is intended for adults who have temporarily lost their chill."
+White Noise Generator,"Play white noise to help sleep, to help tinnitus, to sooth babies. Options are Rain, Thunder, River and Static."
+Soother,"Self-soothing techniques are a good way of distracting or grounding you when feeling anxious.
+The Soother skill has a list of tips or techniques for vision, sound, touch and smell, you can also perform a deep breathing exercise"
+5-Minute Plank Workout,"5-minute plank workout. 6 sets with short rests between them.
+
+The plank is one of the best exercises for core conditioning, and it also works your glutes and hamstrings, supports proper posture, and improves balance. Do 5-minutes plank workout everyday to strengthen your core muscles.
+
+If you'd like to listen to the music during the workout, just ask Alexa to play the music you like and then activate the 5-minute plank workout skill.
+
+Routine:
+60 sec - full plank
+30 sec - elbow plank
+20 sec - raised leg plank (each leg)
+30 sec - side plank (each side)
+30 sec - full plank
+30 sec - elbow plank
+
+10 sec rest after each set
+
+Please submit a review!"
+My Million,"This skill will help you track progress against completing one million metres in a year. You will need to be consistent, a few kilometres each day and you'll get there. Hopefully a bit fitter by the end of the year.
+My choice is rowing - but yours can be walking, running, cycling, whatever your thing is."
+Daily Reflections,Daily Reflections provides a daily message to those in recovery. The skill reads a different reading for every day of the year. You can also specify a date for a particular reading or ask the skill for a random reading.
+LifeWorks,"If your company has Work and Perks from LifeWorks, you can ask Alexa about your recognitions and cash back.
+
+Quickly find out what's in your wallet or where you are on your company leaderboard.
+
+More features are coming soon for customer who have Life and EAP services from LifeWorks"
+Fitness Tips,"Fitness Tips can give you a random health tip, or give a piece of advice on a particular subject or activity on demand. For best results, use short or single word subjects. Say 'cancel' when you are done asking advice for now."
+Train me,"Simple skill to give you a random exercise to perform. Ask for as many as you can handle!
+Next versions will add timers and groups of exercises into 15 minute workouts."
+UK Air Quality,"This skill allows you to check the air quality level in areas across the UK, powered by data from Defra - the Department for Environment, Food & Rural Affairs. Ask it about any city or local area."
+Virtual Nurse,"Virtual Nurse provides you with information about medications, first aid, and illnesses.
+
+Virtual Nurse offers detailed information about illnesses, medications and first aid advice. You can ask things like:
+- Tell me the normal tempature of a baby?
+- How do I perform CPR?
+- What are the symptoms of heatstroke?
+- What is the emergency number in Germany?
+
+Our team continually update Virtual Nurse with new features daily and our content has been provided by NHS Choices for quality assurance. If you like Virtual Nurse, please leave us a 5-star review, which will really help progress the development of Virtual Nurse.
+
+NOTE: Virtual Nurse is for informational and educational purposes only, and is not a substitute for professional medical advice, treatment or diagnosis of any medical condition. Call your doctor to receive medical advice. If you think you may have a medical emergency, please always dial 999 (UK). If you are outside of these countries then please call your countries equivalent emergency number.
+
+If your medication or illness isn't listed within our skill, feel free to request it here: http://virtualnurseapp.com/add"
+Chest Day,"It's the question that plagues every gym-goer's mind:
+
+IS IT CHEST DAY?
+
+The only way you could discover the answer was by visiting chestday.com, until now!
+
+Just ask chest day if it's chest day, and wonder no more!"
+Plume Labs,"Just like the weather, pollution levels can vary greatly over the course of a day. With the Plume skill, you can now track live air quality metrics in your city and stay one step ahead of harmful pollutants.
+
+Plume provides the overall air quality level (moderate, high, very high, etc.), along with further detail about individual pollutant levels (particulate matter, ozone and nitrogen dioxide) and our Plume Index.
+
+You already plan your day to make the most of the sunshine - now you can make the most of clean air too!"
+Fodmap Diet,"Do you have digestion problems like IBS? The FODMAP diet has been shown to help in 60% of cases, but it's difficult to keep track if a food is low or high in FODMAPs.
+
+Use this skill to check specific foods to see if they are low or high in FODMAPs.
+
+You can check over 500 food types, from alfala to yoghurt.
+
+The Fodmap diet skill is not medical advice. Reactions to foods may differ from person to person. For advice on medical issues you should always consult your local medical practitioner."
+Fitbit,"Keep up with your fitness goals by checking Fitbit with Alexa. Stay in touch with your progress and get motivated as you go about your day.
+Check in on your daily Fitbit progress with Alexa. Ask Alexa if you hit your sleep goal, how you did yesterday, or just get a quick update on the stats you care about the most.
+Switch between your Amazon Household profiles to access data from multiple Fitbit accounts.
+If you’d like to learn more about what Alexa can do with Fitbit, you can find more information here: (https://help.fitbit.com/articles/en_US/Help_article/Can-Alexa-tell-me-my-Fitbit-stats).
+Note: Alexa and Amazon, Inc. do not store or retain your Fitbit data, but voice interactions associated with your Amazon account may contain your Fitbit data."
+Scottish Skier,"This skill is regularly updated with information about the latest skiing conditions in the 5 Scottish Ski areas.
+
+Want to find out how many and which lifts are open at a ski area, how the access roads are, or the phone number to contact an area - then this is the skill to use."
+Ask My Buddy,"Ask My Buddy Personal Alert ⨁ Network
+All of us are alone sometimes and we can't always reach our phones or press a button to get assistance. This is why everyone needs Ask My Buddy cause you can't predict when you'll need help.
+
+If you have fallen, or need help, Ask My Buddy lets you immediately alert someone in your Personal Alert Network that you need them to check on you. You may alert just 1 contact or all of your friends or family with just one command. Simply say, 'Alexa, Ask My Buddy to alert YourContact' or 'Alexa, Ask My Buddy to alert everyone', and Ask My Buddy will immediately send an alert, notifying them to check on you right away. Alerts will be sent by text message / SMS, an email, and even a voice telephone call. Ask My Buddy is not a substitute for 112/999, but rather an additional tool offering the security of knowing help is just a shout away.
+
+If you need any help please send email to support@askmybuddy.net (please be sure to check your email spam folder)
+For hands on demonstrations and how-to videos, visit us at https://www.youtube.com/AskMyBuddy
+
+There are 2 parts to setting up Ask My Buddy. Enable and Link Accounts, here in the Alexa companion application. Add/Edit Contacts at the AskMyBuddy.net website.
+
+Enable Ask My Buddy:
+1. Click on Enable Skill button on this page
+
+Link Alexa and Ask My Buddy:
+2. Then tap on the button that says Link Account (will be below a button that says Disable)
+(if on a desktop and don't see the login, check here: https://www.askmybuddy.net/help.php#h.qejfgul34bhk_New2)
+3. The Ask My Buddy Login page will display
+
+If you have not created an Ask My Buddy account,
+a. Scroll down a little and press the button that says Register.
+b. Enter your information and then press the Register button at the bottom.
+c. After you Register, be sure to check your email for a Welcome letter from us. If you do not see an email from us, please check your spam folder.
+
+If you already have an account with Ask My Buddy or just Registered,
+7. Enter your email and password
+8. Press Login
+9. A screen should display saying 'Account linking successful'
+You may now exit the Alexa companion application and go to www.AskMyBuddy.net to add your Contacts.
+
+Add Contacts
+In your internet browser, go to www.askmybuddy.net,
+Click on the Login menu item (if you are on a mobile device, tap on the 3 lines in the upper left corner).
+Enter the login information that you used when you registered (email and password) then press Login button.
+Once logged in you will be at the Settings page.
+Enter any additional information, then press Save Changes
+Select menu item Contacts from the menu at the top (mobile device, tap the 3 lines in the upper left corner)
+Fill in each field for a contact then click the Save Changes button at the bottom. Always press Save Changes after each new contact is entered. If there are any errors you will see them in the blue title bar area.
+
+Once complete you are ready to use Ask My Buddy.
+Talk to your Alexa device and say, 'Alexa, Ask My Buddy to Alert Bob' (instead of Bob use the first name of the contact you added). Alexa will alert that person and let you know that she did.
+
+To alert all of your contacts at once say:
+Alexa Ask My Buddy to Alert All
+Alexa Ask My Buddy to Alert Everyone
+Alexa Ask My Buddy to Alert Everybody
+Alexa Ask My Buddy to Alert My Family
+Alexa Ask My Buddy to Send Help
+
+To alert only one contact say:
+Alexa Ask My Buddy to Alert yourContactFirstName
+
+Ask My Buddy is a free service that leverages the Alexa Voice Platform to connect a user to their Personal Alert Network using only their voice.
+
+Ask My Buddy is not a substitute for 112/999, but rather an additional tool offering the security of knowing help is just a shout away. 'Alexa, Ask My Buddy to Alert Everyone'
+
+Look for the monthly newsletter to learn about new names to alert - to help you and your Personal Alert Network stay in practice."
+Portsmouth CTC Events,"Using this skill, you can retrieve details of events run by Portsmouth CTC - part of Cycling UK.
+
+Events include our regular club rides and other events such as club nights."
+hypno therapist,"I'm Barry Thain. I'm a Clinical Hypnotist with more than 20 years of experience in private practice, including eight years with the National Health Service. I have treated thousands of people from all over the world, for a wide range of physiological and psychological issues, from Acne to Zenophobia and all points in between.
+
+Therapeutic hypnotism is been done face to face when your specific circumstances can be accommodated. Skype sessions (Skypnosis) can also be very effective. I have recorded some hypnotherapy protocols that you can experience with this Alexa App in your home, for when personal therapy isn’t possible.
+
+Please contact me if you want to discuss how I might otherwise be able to help you.
+
+Please e-mail bt@mindsci-clinic.com or call +44 (0)20 8948 2439 or +44 (0)7788 130082 with any suggestions to improve this Alexa service, or to discuss your individual needs.
+
+You can say ""Alexa ask hypno therapist for help"" to get a list of commands."
+BabyMate,"BabyMate is designed to record your babies activities during those busy first few months when getting hold of your mobile just isn't possible.
+
+No personal information or registration is required - just add babymate and give it a go.
+
+So what can I ask? Try some of these activities:
+
+Record a poo
+How many poos today?
+Record a heavy diaper / Record a pee / Record a diaper
+How many wet diapers today / How many heavy diapers today / How many pees today
+Record a feed
+Record a feed on right breast
+How many feeds on right breasty
+Record a bottle of 150 mil
+SetBottle Record a bottle of 200 millilitres
+How much formula has my baby had today
+How much top up
+Record a one hour sleep
+How much sleep today
+Record a new weight of 7.1 kilograms
+What was the last recorded weight / What is the current weight
+
+If you or Alexa make a mistake then it's easy to remove the last record. Just ask to :
+
+If you or Alexa make a mistake then no problem, Just ask babymate to 'Delete the last record'"
+FitnessLogger,"FitnessLogger is an Alexa skill to keep track of your daily exercises. Using FitnessLogger, you can instruct Alexa to store your workouts without reaching out to your personal devices. You can tell FitnessLogger to save your current workout, clear your last saved workout, or you can ask for your best performance. You can always review your previous workouts by just specifying the date and exercise.
+
+Following are the list of supported actions by FitnesLogger:
+- Save your current workout
+- Delete your last saved workout
+- Get all your workouts on a specific date
+- Get all workouts for a specific exercise on a particular date
+- Find your personal best for an exercise
+- Get a list of all supported exercises
+
+FitnessLogger currently supports a pre-defined list of exercises. You can say ""Alexa, ask Fitness Logger for all supported exercises"" to get a list of all exercises. Please use the feedback form, if you want new exercises added to the supported list."
+Workout Buddy,"This skill gives you a random exercise to do, similar to the ""deck of cards"" workout program. Some of the exercises included are push-ups, crunches, and air squats."
+yoga trainer,"Yoga Trainer is your personal yoga teacher. This Alexa Skill guides you through 26 postures that help you sharpen your mind, build your balance, strengthen your body, and stay flexible. This Skill assumes at least a basic level of familiarity with Bikram Yoga's postures and should be used as an aide by people who are already comfortable enough with postures to practice at home without supervision. You can get started right away without making an account."
+Period Tracker,"Period Tracker will help you keep track of your menstrual cycle's phases for a better family planning.
+It is loosely based on the Standard Days Method by Georgetown University, and may only be used by women whose cycles are usually between 26 and 32 days in length.
+
+You should start by indicating the date of your last period (Day 1 of your menstrual cycle), and remember to continue to do so each period, for the calculations to work.
+The skill will average your cycles duration and estimate phases accordingly.
+
+Example uses:
+
+- Alexa, launch Period Tracker
+- I got my period today
+- when is my fertile window?
+
+- Alexa, ask Period Tracker when do i get my period?
+
+Maybe you forget to keep your data up-to-date, so it's likely the averages and calculations are not perfect, so you can clean up everything and start over:
+
+- Alexa, open Period Tracker
+- reset my database
+- i got my period on March 17th"
+Stretcher,This skill provides users with a variety of stretches to do before they begin their particular exercise. There are different parts of the body that a soccer player may want to stretch and different parts of the body that a runner may want to stretch. This skill is very easy to use where the user simply demands stretches for their desired physical activity. Alexa will provide the user with quick simple stretches and a brief description of them to help them prepare for their desired exercise.
+Zika Health Facts,Alexa tells you health facts about Zika. Ideal for using before you travel to Brazil or other areas with higher rate of infected mosquitos.
+Daily Pledge,"Harness the power of your own personal wellness motivator. Simply ask Alexa for your pledge and start your day with that in mind. Get a new pledge every day and focus on that, bettering yourself more and more."
+H2O-Pal,"You can now monitor your water intake just by using your voice! This skill works together with the free H2OPal iPhone app and you connect the skill to the app by simply linking the H2O-Pal Alexa skill to the same account you use for the H2OPal app.
+This skill will sync with the water intake data that's on the app. You can provide water input data manually on your iPhone, automatically through the H2OPal tracker and now you can do it using your voice and this Alexa skill. You also check your water intake status by voice at any time with this skill.
+In the H2OPal iPhone app you can also enable the integration with Fitbit, so any water intake you record with this Alexa skill will also update your water intake information on your Fitbit account.
+Your iPhone needs to be connected to the internet (either by wifi or data) to ensure that Alexa has access to the latest measurements.
+The H2OPal smart bottle hydration tracker is not needed to use this skill, though you can easily order one on Amazon (just search for H2OPal).
+We're happy to learn about your experience with H2OPal. If you have any suggestions, questions or if you experience an issue just send us an email at support@outofgalaxy.com.
+Our goal is to help you stay healthy and hydrated =)"
+Before the Knot,"Marriage is difficult! It is even more difficult when you haven't discussed some of the most basic marriage topics. How many children do we want to have? How would we handle being broke? This skill is a fun way to get you and your partner talking about some of these topics. Simply ask Alexa for a wedding topic, discuss with your partner, then ask for another."
+DoctorBones,"Doctor Bones is a medical based trivia game that will challenge you with 5 questions. The focus of the questions are towards EMS personnel, however many are not above the layperson, nor necessarily below those in more advanced medical professions.
+
+This skill is for fun and informal education purposes only, always verify what you learn before to trust it to be true. In the event of a real medical emergency always seek qualified and definitive medical care, and/or call 911. The author expressly disclaims responsibility, and shall have no liability, for any damages, loss, injury, or liability whatsoever suffered as a result of your reliance on the information you may learn by using this app."
+Fit Assist,"This is a simple skill to allow you to ask Alexa to tell you some interesting fitness facts. The goal of this skill is to give you advice on how to live a healthy, productive lifestyle."
+Buddha Quotes,"This skill, Buddha Quotes, offer a quick moment of meditation and reflection for users by giving a randomized Buddha quote on demand."
+Girl Names,Ask Alexa for random girl names
+WorkoutHelper,"WorkoutHelper is a skill that can help you with workout recipes for your current mood.
+
+To use the skill, enable it. Then you can ask the following:
+
+Alexa, ask workout helper what workout is suitable when I am happy"
+MeditationFacts,"Meditation Facts Skill is about knowing the facts on benefits of doing regular meditation.
+
+These facts came through studies and research from medical doctors and professionals from New York and New Jersey, on different people who does meditation versus those who don't.
+
+It is a great and informative facts skill about meditation and its importance related to our health and wellness."
+Healthy Diet Trivia,"A fun trivia game helps teach diet and nutrition facts and information.
+Answer with a number 1 through 4 to select the correct answer."
+Homeopathy,"Homeopathy provides home made remedies to help relieve some of the common symptoms like cold, stomach ache. Our remedies will provide you recipe steps to prepare remedy.
+DISCLAIMER: This tool does not provide medical advice, and is for informational and educational purposes only. It is not a substitute for professional medical advice, treatment or diagnosis. Contact your doctor to receive medical help. If you think you may have a medical emergency, please dial 911."
+Bedtime,"Bedtime counts sleep cycles to help time when you should go to bed or wake up. Waking up in the middle of a sleep cycle makes you feel tired but waking up in between cycles will make you feel energized and ready to spring out of bed.
+
+
+
+
+
+
+- ""I want to go to sleep at 8:00 pm.""
+
+
+
+
+- ""I'm going to bed at 10:30 pm""
+
+
+
+
+- ""I need to wake up at 7:30 am""
+
+
+
+
+- ""When should I go to bed to wake up at 5:30 am?""
+
+
+
+
+- ""When should I wake up if I go to sleep at 11:55 pm?"""
+Vitamin Cards,"Test your knowledge of FDA recommended daily allowances of vitamins and minerals for adults based on a 2,000 a day diet.
+
+*Note - this is just for fun, you must consult your physician before making any changes to your diet.
+
+*This information was collected from
+http://www.fda.gov/Food/GuidanceRegulation/GuidanceDocumentsRegulatoryInformation/LabelingNutrition/ucm064928.htm"
+Bodybuilding Trivia,"General questions about bodybuilding. Test your knowledge in multiple choice trivia style questions. To start the game, say, ""Alexa, open body building trivia."""
+7-Minute Workout,No long description available.
+Peaceful Habit,"Peaceful Habit is a simple Skill that helps you meditate for 5, 10, or 20 minutes every day.
+
+Each meditation begins and ends with three bell chimes to prepare you for the meditation and to let you know when your practice is complete. In between the chimes is peaceful silence so you can concentrate on your meditation practice."
+TreycentSupplementAdvisor,"The Supplement Advisor answers questions regarding which vitamins and supplements are recommended for certain conditions.
+
+Disclaimer: This tool does not provide medical advice, and is for informational and educational purposes only, and is not a substitute for professional medical advice, treatment or diagnosis. Call your doctor to receive medical advice. If you think you may have a medical emergency, please dial 911."
+Healthy Food Facts,"You know the saying, ""An apple a day keeps the doctor away"" right? Well this app will give you more interesting and detailed facts on healthy food! This app is perfect for those who want to gain more knowledge on healthy and nutritional food facts. It provides random cool facts and benefits of certain nutritional food to keep your mind set on healthy living!
+
+It's simple, it's fun, and its great to get one or multiple facts a day to motivate you on your journey to a healthy lifestyle. Keep your heart healthy!"
+Pregnancy Countdown,"Pregnancy Countdown lets you set your due date, allowing you to ask how long until the baby arrives and find out the size of the baby whenever you would like.
+
+Icon made by Roundicons from www.flaticon.com."
+awesome hair tips,This skill has tips for how to get your best and healthiest hair possible. The user gets started by asking Alexa for awesome hair tips. There are no prerequisites or special products needed. I share a few products I particularly enjoy.
+Aromatherapy,"Aromatherapy is a skill that can help you with some common diffuser recipes for use with your essential oils collection. We are continuing to add recipes so let us know at AromatherapySkill.com and we can add the recipes you love.
+
+To use this skill, enable it. Then you can ask the following:
+
+Ask Aromatherapy for a recipe for focus.
+Ask Aromatherapy for a recipe for happy kids.
+Ask Aromatherapy for a recipe for stress relief.
+
+You can also say things like:
+Ask Aromatherapy what is a recipe for peace.
+Ask Aromatherapy what is the recipe for a headache.
+Ask Aromatherapy what is a recipe for morning sickness.
+
+Please visit us at www.aromatherapyskill.com and let us know what recipes you would like to see next or you can send us feedback below. You can also join our mailing list to get updates and alerts when we add new functionality."
