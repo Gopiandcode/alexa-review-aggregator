@@ -35,9 +35,9 @@ function navigateToAlexaSkills(driver, callback) {
 	});
 }
 function goToLifestyleCategory(driver, callback) {
-	return driver.wait(until.elementLocated(webdriver.By.xpath('//h4[contains(text(), "Health & Fitness") and @class="text-heading"]'))).then(() => {
-		return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.xpath('//h4[contains(text(), "Health & Fitness") and @class="text-heading"]')))).then(() => {
-			return driver.findElement(webdriver.By.xpath('//h4[contains(text(), "Health & Fitness") and @class="text-heading"]')).then((item) => {
+	return driver.wait(until.elementLocated(webdriver.By.xpath('//h4[contains(text(), "Lifestyle") and @class="text-heading"]'))).then(() => {
+		return driver.wait(until.elementIsVisible(driver.findElement(webdriver.By.xpath('//h4[contains(text(), "Lifestyle") and @class="text-heading"]')))).then(() => {
+			return driver.findElement(webdriver.By.xpath('//h4[contains(text(), "Lifestyle") and @class="text-heading"]')).then((item) => {
 				item.getAttribute('innerHTML').then((text) => console.log(text));
 				item.click().then(() => {
 				return callback(driver);
@@ -70,13 +70,26 @@ function foreachListElement(driver, elems) {
 	});
 }
 
+function scrollNtimes(driver, count, callback){
+	if(count <= 0) return callback(driver);
+	else {
+//driver.executeScript('window.scrollBy(0,800);')
+		
+
+
+		return driver.findElement(webdriver.By.css('body')).sendKeys(webdriver.Key.END).then(() => {
+			return scrollNtimes(driver, count-1, callback);
+		});
+	}
+}
+
 function search(driver, i, length) {
 	let search_str = '#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li';
 	return driver.findElements(webdriver.By.css(search_str)).then((elems) => {
-						console.log("length: " + length + ", elem.length: " + elems.length);
+						console.log("length: " + length + ", elem.length: " + elems.length + ", i = " + i);
 						if (length < elems.length) { console.log("length was " + length + ", is now " + elems.length); length = elems.length; }
 						if(elems.length < i)
-							return driver.sleep(1000).then(() => {return search(driver, i, length);});
+							return driver.sleep(400).then(() => {return search(driver, i, length);});
 						if(i < length) {
 							driver.executeScript("if(arguments[0]) arguments[0].scrollIntoView()", elems[i+1]).then(() => {
 							let result = parseSearchResult(driver, elems[i])
@@ -104,7 +117,7 @@ function foreachSearchResult(driver, callback) {
 			//		let pendinghtml = elems.map((elem) => { return parseSearchResult(driver, elem); });
 			//foreachListElement(driver, elems);
 			let length = elems.length;
-			let i = 0;
+			let i = 519;
 /*			let result = promise.fullyResolved(i);
 			let search_str = '#d-content > div > div > div.a2s-content-region > div > div > div > div.a2s-list-region > ul > li';
 			for (; i < length; ++i) {
@@ -212,7 +225,10 @@ function parseSearchResult(driver, elem) {
 navigateToAlexaSkills(driver, (driver) => {
 	//performSearch(driver, "smoking", (driver) => {
 	goToLifestyleCategory(driver, (driver) => {
+		scrollNtimes(driver, 1000, (driver) => {
+
 		foreachSearchResult(driver);
+		});
 	});
 });
 
